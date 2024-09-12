@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Faq from "./FAQ";
+import Faq from "./Faq";
 import styles from "./Faqs.module.css";
 import Button from "./Button";
 
