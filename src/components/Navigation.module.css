@@ -1,0 +1,142 @@
+.headerMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5%;
+  padding-block: 2rem;
+  position: relative;
+  z-index: 99;
+}
+
+.headerMobileUl{
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color:rgba(0, 0, 0, .75);
+  width: 100vw;
+  height: 100vh;
+  list-style: none;
+  text-align: center;
+  gap: 1rem;
+  justify-items: center;
+  padding-block: 1rem;
+  box-shadow: 50px 400px 22000px black;
+  border-radius: 0.3rem;
+  z-index: 2;
+  font-weight: 700;
+  padding-top: 12.5vh;
+
+}
+
+.headerMobileUl div:first-child {
+  border-top: 1px solid var(--Grayish-Blue);
+  padding-top: 1rem;
+}
+
+.headerMobileUl div {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  letter-spacing: .2rem;
+  font-weight: 400;
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--Grayish-Blue);
+  width: 90%;
+  padding-bottom: 1rem;
+}
+
+.headerMobileUl button {
+  background-color: transparent;
+  box-shadow: none;
+  border: 3px white solid;
+  width: 90%;
+  margin-inline: auto;
+  padding-block: .5rem;
+  letter-spacing: .2rem;
+  font-weight: 400;
+  border-radius: .3rem;
+  font-size: 1.15rem;
+}
+
+
+
+.headerMobile img {
+  z-index: 3;
+}
+
+.mobileUlOpen.mobileUlOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.headerMobileSocials.headerMobileSocials {
+  position: absolute;
+  border-bottom: none;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.headerDesktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 4rem;
+  margin-inline: auto;
+  padding-inline: 5%;
+}
+
+.headerDesktop ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+.headerDesktop li {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+
+
+.headerDesktop button {
+
+  background-color: var(--Soft-Red);
+  padding-block: .7rem;
+  padding-inline: 2rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .15) ;
+  border: 2px solid var(--Soft-Red);
+  transition: all .3s;
+}
+
+.headerDesktop button:hover {
+  background-color: #fff;
+  color: var(--Soft-Red);
+}
+
+.headerDesktopEnd {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+
+@media (min-width: 450px) {
+  .headerDesktop li:hover {
+    color: var(--Soft-Red);
+}
+}
+
+@media (min-width: 1600px) {
+  .headerDesktop {
+    padding-inline: 12.5%;
+  }
+}

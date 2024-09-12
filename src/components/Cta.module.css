@@ -1,0 +1,131 @@
+.cta {
+  background-color: var(--Soft-Blue);
+  color: white;
+  text-align: center;
+  padding-block: 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.cta p {
+  letter-spacing: 0.2rem;
+}
+
+.cta h2 {
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 1.25rem;
+  margin-inline: auto;
+  position: relative;
+  width: max-content;
+  isolation: isolate;
+}
+
+.form input {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: 2px solid var(--Soft-Red);
+  outline: none;
+}
+
+.form input:valid {
+  border: none;
+}
+
+.form input:valid + label {
+  opacity: 0;
+}
+
+.form:has(input:valid)::after {
+  opacity: 0;
+}
+
+.form input::placeholder {
+  color: var(--Grayish-Blue);
+}
+
+.form button {
+  background-color: var(--Soft-Red);
+  color: #fff;
+  padding-block: 0.75rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid var(--Soft-Red);
+}
+
+.form::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  z-index: -1;
+  left: 0;
+  height: 2rem;
+  width: 100%;
+  background-color: red;
+  border-radius: 0 0 0.3rem 0.3rem;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.form label {
+  position: absolute;
+  top: 40%;
+  left: 0.25rem;
+  font-size: 0.875rem;
+  font-style: italic;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+@media (min-width: 700px) {
+  .cta {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .form button {
+    padding-inline: 2rem;
+  }
+
+  .form input {
+    padding-inline: 1rem;
+  }
+  .cta h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    max-width: 20ch;
+    margin-inline: auto;
+  }
+
+  .cta p {
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    letter-spacing: .3rem;
+  }
+
+  .form::after {
+    bottom: -1.25rem;
+    top: auto;
+    width: 60.5%;
+  }
+
+  .form label {
+    top: auto;
+    bottom: -1.15rem;
+  }
+  .form button:hover {
+    background-color: #fff;
+    color: var(--Soft-Red);
+  }
+}

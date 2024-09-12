@@ -1,0 +1,47 @@
+.extension {
+  width: 80%;
+  margin-inline: auto;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.15);
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.extension::after {
+  content: "";
+  background-image: url("../../public/images/bg-dots.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 20px;
+  bottom: 25%;
+  position: absolute;
+}
+
+.extensionContent {
+  margin-bottom: 2.5rem;
+}
+
+.extensionContent p {
+  color: var(--Grayish-Blue);
+}
+
+
+
+@media (min-width: 700px) {
+    .littleOff {
+        transform: translateY(2rem);
+    }
+    
+    .moreOff {
+        transform: translateY(5rem);
+    }
+    .extension {
+        padding-inline: 2.5rem;
+        width: 100%;
+    }
+}

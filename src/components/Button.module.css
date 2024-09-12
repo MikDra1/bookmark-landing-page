@@ -1,0 +1,31 @@
+.btn {
+    background-color: var(--Soft-Blue);
+    color: #fff;
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    border: 2px solid var(--Soft-Blue);
+    transition: all .3s;
+}
+
+.special {
+    background-color: #f0efef;
+    color: var(--Soft-Blue);
+    border: 2px solid #f0efef;
+}
+
+@media (min-width: 700px) {
+    .btn:hover {
+        background-color: #fff;
+        color: var(--Soft-Blue);
+    
+    }
+    
+    
+    .special:hover {
+        border: 2px solid var(--Soft-Blue);
+        color: var(--Soft-Blue);
+    }
+}
