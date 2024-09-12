@@ -2,6 +2,10 @@ import { useState } from 'react'
 import styles from './Features.module.css'
 import Feature from './Feature'
 
+import image1 from '../../public/images/illustration-features-tab-1.svg'
+import image2 from '../../public/images/illustration-features-tab-2.svg'
+import image3 from '../../public/images/illustration-features-tab-3.svg'
+
 function Features() {
     const [feature, setFeature] = useState(1)
 
@@ -19,9 +23,9 @@ function Features() {
             <h3 className={feature === 3 ? styles.activeTab : ''} onClick={() => setFeature(3)}>Easy Sharing</h3>
             </div>
 
-            {feature === 1 && <Feature image='./images/illustration-features-tab-1.svg' title='Bookmark in one click' >Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</Feature>}
-            {feature === 2 && <Feature image='./images/illustration-features-tab-2.svg' title='Intelligent search' >Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</Feature>}
-            {feature === 3 && <Feature image='./images/illustration-features-tab-3.svg' title='Share your bookmarks' >Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</Feature>}
+            {feature === 1 && <Feature image={image1} title='Bookmark in one click' >Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</Feature>}
+            {feature === 2 && <Feature image={image2} title='Intelligent search' >Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</Feature>}
+            {feature === 3 && <Feature image={image3} title='Share your bookmarks' >Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</Feature>}
 
 
         </div>
