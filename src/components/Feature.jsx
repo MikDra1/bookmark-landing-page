@@ -6,7 +6,7 @@ function Feature({image, title, children}) {
     return (
         <div className={styles.feature}>
             <div className={styles.featureImg}>
-                <img src={image} alt="" />
+                <img src={image} alt="" loading='eager' />
             </div>
             <div>
                 <h2>{title}</h2>
